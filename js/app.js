@@ -31,7 +31,7 @@ Enemy.prototype.render = function() {
 };
 
 
-var player = function() {
+var Player = function() {
 
     this.sprite = 'images/char-boy.png';
     this.x = 202;
@@ -56,7 +56,7 @@ var player = function() {
 
 };
 
-player.prototype.update = function(dt) {
+Player.prototype.update = function(dt) {
     if (this.y < 55) {
         this.x = 202;
         this.y = 406;
@@ -64,11 +64,11 @@ player.prototype.update = function(dt) {
 };
 
 
-player.prototype.render = function() {
+Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-var player = new player();
+var player = new Player();
 
 
 var allEnemies = [];
